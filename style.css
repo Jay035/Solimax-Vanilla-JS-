@@ -175,11 +175,11 @@ section {
 }
 
 .hero-bg {
-  height: 900px;
+  height: 700px;
   width: 100%;
   overflow-x: hidden;
   transform: perspective(300px) translate3d(0px, -66px, 48px)
-    scale3d(0.86, 0.75, 1) translateY(280px);
+    scale3d(0.86, 0.75, 1) translateY(480px);
 }
 
 .hero-img {
@@ -517,6 +517,7 @@ section {
 
 .contract-address button {
   cursor: pointer;
+  border: none;
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -566,6 +567,7 @@ footer a {
 .social-media-links{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
   margin-top: 91px;
