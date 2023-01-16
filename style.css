@@ -4,6 +4,8 @@
   /* colors */
   --body-bg: #090e17;
   --white: #fff;
+  --card-bg: rgba(217, 217, 217, 0.03);
+  --text-color: #9ca3af;
 
   --padding: 2.5rem;
   --section-title-font-size: 2.3em;
@@ -137,7 +139,7 @@ section {
 
 /* HERO SECTION */
 .hero-section {
-  margin-block: 6.5em 9.375em;
+  margin-top: 6.5em;
   position: relative;
   height: 1000px;
 }
@@ -211,14 +213,58 @@ section {
   line-height: 64px;
 }
 
-.powering-the-future{
-    margin-top: -9em;
+.powering-the-future {
+  margin-top: -9em;
 }
 
-.powering-the-future > div{
-    display: grid;
+.powering-the-future .title {
+  margin-bottom: 76px;
 }
 
+.powering-the-future > div {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  height: fit-content;
+  padding: 32px;
+}
+
+.powering-the-future .card {
+  border: 0.5px solid #374151;
+  border-radius: 8px;
+  display: flex;
+  gap: 14px;
+  padding: 32px;
+  /* height: 281px; */
+  flex-direction: column;
+}
+
+.powering-the-future .card h3 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.card-number {
+  color: var(--white);
+  padding: 8px 24px;
+  width: fit-content;
+  background: rgba(69, 79, 218, 0.9);
+  border-radius: 40px;
+}
+
+.powering-the-future .card-1 {
+  height: 353px;
+  justify-content: flex-end;
+}
+
+.powering-the-future .card-3 {
+  border: 2px solid #a818ba
+  /* linear-gradient(to right, #6b03b8 90%, #a818ba 90%, #e22bbb 90%) */
+  ;
+}
 
 @media screen and (min-width: 768px) {
   header {
@@ -272,7 +318,19 @@ section {
     padding-inline: var(--padding);
   }
 
-  .powering-the-future > div{
-    grid-template-columns: repeat(4, auto);
+  .powering-the-future > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .powering-the-future .card-2,
+  .powering-the-future .card-4 {
+    place-self: end;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .powering-the-future > div {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
