@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* colors */
+  --body-bg: #090e17;
+  --white: #fff;
+
+  --padding: 2.5rem;
+  --section-title-font-size: 2.3em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  position: relative;
+}
+
+nav > .menu {
+  display: none;
+  list-style: none;
+  -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+}
+
+.menu.active {
+  background-color: var(--body-bg);
+  padding-top: 20em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+.menu.active a {
+  font-size: 18px;
+}
+
+.menu a {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger input {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide input */
+  z-index: 1; /* top of the menu */
+}
+
+.hamburger span {
+  background-color: var(--white);
+  width: 50px;
+  height: 4px;
+  margin-bottom: 8px;
+  display: block;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+}
+
+#span1 {
+  transform-origin: 4px 0px;
+}
+
+#span3 {
+  transform-origin: bottom right;
+}
+
+.hamburger input:checked ~ span {
+  background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+}
+
+.hamburger input:checked ~ #span1 {
+  transform: rotate(45deg) translate(8px);
+}
+
+.hamburger input:checked ~ #span2 {
+  transform: rotate(495deg) translate(4px);
+}
+
+.hamburger input:checked ~ #span3 {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+section {
+  padding-inline: var(--padding);
+}
+
+/* HERO SECTION */
+.hero-section {
+  margin-block: 6.5em 9.375em;
+  position: relative;
+  height: 1000px;
+}
+
+.hero-container {
+  position: absolute;
+  top: 0;
+  display: grid;
+  gap: 1.4em;
+}
+
+.hero-bg {
+  height: 900px;
+  width: 100%;
+  transform: perspective(300px) translate3d(0px, -66px, 102px) rotateX(40deg)
+    scale3d(0.86, 0.75, 1) translateY(180px);
+}
+
+.hero-img {
+  width: 100%;
+  height: 613px;
+}
+
+.hero-container .left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-container .hero-title {
+  font-size: 2.5em;
+  line-height: 50px;
+}
+
+.left-col p {
+  color: #9ca3af;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30.6px;
+}
+
+/* HERO BTN */
+.hero-btn {
+  background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+  border-radius: 40px;
+  width: 285px;
+}
+
+.hero-btn a {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 13px;
+  padding-block: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* POWERING THE FUTURE OF SMART CONTRACTS */
+.title {
+  font-weight: 500;
+  font-size: var(--section-title-font-size);
+  line-height: 64px;
+}
+
+.powering-the-future{
+    margin-top: -9em;
+}
+
+.powering-the-future > div{
+    display: grid;
+}
+
+
+@media screen and (min-width: 768px) {
+  header {
+    --padding: 2.5rem 6.25rem;
+  }
+
+  nav > .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  section {
+    padding-inline: 6.625rem;
+  }
+
+  .hero-section {
+    height: 900px;
+    margin-block: 6.5em 0;
+  }
+
+  .hero-container {
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+  }
+  .hero-img {
+    width: 682px;
+    height: 613px;
+  }
+
+  .hero-container .hero-title {
+    font-size: 4.7em !important;
+    line-height: 80px !important;
+  }
+
+  .hero-bg {
+    height: 552px !important;
+    transform: perspective(800px) translate3d(0px, -66px, 98px) rotateX(40deg)
+      scale3d(0.86, 0.75, 1) translateY(180px) !important;
+  }
+
+  .title {
+    --section-title-font-size: 3.25em;
+    text-align: center;
+    padding-inline: var(--padding);
+  }
+
+  .powering-the-future > div{
+    grid-template-columns: repeat(4, auto);
+  }
+}
