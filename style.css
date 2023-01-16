@@ -4,7 +4,7 @@
   /* colors */
   --body-bg: #090e17;
   --white: #fff;
-  --card-bg: rgba(217, 217, 217, 0.03);
+  --card-bg: #d9d9d908;
   --text-color: #9ca3af;
 
   --padding: 2.5rem;
@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -91,8 +92,8 @@ nav > .menu {
 
 .hamburger span {
   background-color: var(--white);
-  width: 50px;
-  height: 4px;
+  width: 40px;
+  height: 3px;
   margin-bottom: 8px;
   display: block;
   border-radius: 4px;
@@ -135,6 +136,8 @@ nav > .menu {
 
 section {
   padding-inline: var(--padding);
+  padding-block: 7em;
+  width: 100%;
 }
 
 /* HERO SECTION */
@@ -142,25 +145,30 @@ section {
   margin-top: 6.5em;
   position: relative;
   height: 1000px;
+  width: 100%;
+  padding-inline: 0;
 }
 
 .hero-container {
   position: absolute;
   top: 0;
   display: grid;
+  justify-content: center;
   gap: 1.4em;
+  padding-inline: 2em;
 }
 
 .hero-bg {
   height: 900px;
   width: 100%;
-  transform: perspective(300px) translate3d(0px, -66px, 102px) rotateX(40deg)
-    scale3d(0.86, 0.75, 1) translateY(180px);
+  overflow-x: hidden;
+  transform: perspective(300px) translate3d(0px, -66px, 108px)
+    scale3d(0.86, 0.75, 1) translateY(280px);
 }
 
 .hero-img {
   width: 100%;
-  height: 613px;
+  /* height: 613px;  */
 }
 
 .hero-container .left-col {
@@ -190,6 +198,7 @@ section {
     rgba(226, 43, 187, 0.9) 85.69%
   );
   border-radius: 40px;
+  border: none;
   width: 285px;
 }
 
@@ -210,7 +219,8 @@ section {
 .title {
   font-weight: 500;
   font-size: var(--section-title-font-size);
-  line-height: 64px;
+  line-height: 44px;
+  text-align: center;
 }
 
 .powering-the-future {
@@ -223,6 +233,7 @@ section {
 
 .powering-the-future > div {
   display: grid;
+  place-content: center;
   gap: 20px;
 }
 
@@ -238,7 +249,8 @@ section {
   display: flex;
   gap: 14px;
   padding: 32px;
-  /* height: 281px; */
+  max-width: 550px;
+  height: 281px;
   flex-direction: column;
 }
 
@@ -255,18 +267,106 @@ section {
   border-radius: 40px;
 }
 
-.powering-the-future .card-1 {
-  height: 353px;
-  justify-content: flex-end;
+.powering-the-future .card-3 {
+  border: 2px solid transparent;
+  border-image: linear-gradient(80.6deg, #6b03b8 90%, #a818ba 90%, #e22bbb 90%)
+    1;
+  /* background: 
+  linear-gradient(#d9d9d908, #000) padding-box,
+  linear-gradient(80.6deg, #6b03b8 90%, #a818ba 90%, #e22bbb 90%) border-box; */
+
+  border-radius: 8px;
 }
 
-.powering-the-future .card-3 {
-  border: 2px solid #a818ba
-  /* linear-gradient(to right, #6b03b8 90%, #a818ba 90%, #e22bbb 90%) */
-  ;
+/* OUR MISSION */
+.our-mission {
+  /* padding-inline: var(--padding); */
+  margin-top: 8.25em;
+  height: 764px;
+  text-align: center;
+  position: relative;
+}
+
+.our-mission .mission-bg {
+  transform: perspective(100px) translate3d(0px, -66px, 100px)
+    scale3d(0.86, 0.75, 1);
+  width: 100%;
+}
+
+.our-mission .container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.our-mission p {
+  margin-top: 21px;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+.our-mission .mission-asset {
+  margin-top: 6.25em;
+  width: 100%;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    --padding: 2.5rem 4rem;
+  }
+
+  section {
+    --padding: 4rem;
+    padding-block: 9.375em;
+  }
+
+  .hero-section {
+    height: 900px;
+    margin-block: 6.5em 0;
+    padding-inline: 2rem;
+  }
+
+  .hero-container .hero-title {
+    font-size: 3.5em !important;
+    line-height: 80px !important;
+  }
+
+  .hero-bg {
+    height: 552px !important;
+    transform: perspective(800px) translate3d(0px, -66px, 128px) rotateX(40deg)
+      scale3d(0.86, 0.75, 1) translateY(80px) translateX(-40px) !important;
+  }
+
+  .title {
+    --section-title-font-size: 3.25em;
+    line-height: 64px;
+    padding-inline: var(--padding);
+  }
+
+  .powering-the-future > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .powering-the-future .card {
+    height: unset;
+  }
+
+  /* OUR MISSION */
+  .our-mission {
+    /* --padding: 10em ; */
+  }
+
+
+}
+
+@media screen and (min-width: 1000px) {
   header {
     --padding: 2.5rem 6.25rem;
   }
@@ -279,23 +379,26 @@ section {
     list-style: none;
   }
 
+  .menu.active {
+    /* background-color: var(--body-bg); */
+    padding-top: 0;
+    position: unset;
+    width: 100%;
+    height: unset;
+    display: flex;
+    flex-direction: row;
+  }
+
   .hamburger {
     display: none;
-  }
-
-  section {
-    padding-inline: 6.625rem;
-  }
-
-  .hero-section {
-    height: 900px;
-    margin-block: 6.5em 0;
   }
 
   .hero-container {
     grid-template-columns: repeat(2, 50%);
     align-items: center;
+    padding-inline: 6.6em;
   }
+
   .hero-img {
     width: 682px;
     height: 613px;
@@ -306,31 +409,41 @@ section {
     line-height: 80px !important;
   }
 
-  .hero-bg {
-    height: 552px !important;
-    transform: perspective(800px) translate3d(0px, -66px, 98px) rotateX(40deg)
-      scale3d(0.86, 0.75, 1) translateY(180px) !important;
-  }
-
-  .title {
-    --section-title-font-size: 3.25em;
-    text-align: center;
-    padding-inline: var(--padding);
-  }
-
   .powering-the-future > div {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .powering-the-future .card{
+    height: fit-content;
+  }
+
+  .powering-the-future .card-1 {
+    height: 353px;
+    justify-content: flex-end;
   }
 
   .powering-the-future .card-2,
   .powering-the-future .card-4 {
     place-self: end;
   }
-}
 
+  /* OUR MISSION */
+  .our-mission {
+    /* --padding: 19.75em; */
+  }
 
-@media screen and (min-width: 1000px) {
-  .powering-the-future > div {
-    grid-template-columns: repeat(4, 1fr);
+  .our-mission .mission-bg {
+    transform: perspective(300px) translate3d(0px, -66px, 128px)
+      scale3d(0.86, 0.75, 1);
+    width: 100%;
+  }
+
+  .our-mission .container {
+    width: 946px;
+    z-index: -1;
+  }
+
+  .our-mission .mission-asset {
+    width: 946px;
   }
 }
