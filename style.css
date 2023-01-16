@@ -18,6 +18,10 @@
   /* border: 1px solid red; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--body-bg);
   color: var(--white);
@@ -70,6 +74,18 @@ nav > .menu {
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.menu a:hover {
+  background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 /* HAMBURGER ICON */
@@ -136,7 +152,7 @@ nav > .menu {
 
 section {
   padding-inline: var(--padding);
-  padding-block: 7em;
+  /* padding-block: 7em; */
   width: 100%;
 }
 
@@ -144,7 +160,7 @@ section {
 .hero-section {
   margin-top: 6.5em;
   position: relative;
-  height: 1000px;
+  /* height: 1009px; */
   width: 100%;
   padding-inline: 0;
 }
@@ -162,7 +178,7 @@ section {
   height: 900px;
   width: 100%;
   overflow-x: hidden;
-  transform: perspective(300px) translate3d(0px, -66px, 108px)
+  transform: perspective(300px) translate3d(0px, -66px, 48px)
     scale3d(0.86, 0.75, 1) translateY(280px);
 }
 
@@ -224,11 +240,18 @@ section {
 }
 
 .powering-the-future {
-  margin-top: -9em;
+  /* margin-top: -9em; */
+  /* margin-bottom: 269px; */
+  /* padding-top: 150px; */
+  /* height: 1027px; */
+  padding-bottom: 8rem;
+  position: relative;
 }
 
 .powering-the-future .title {
-  margin-bottom: 76px;
+  padding-top: 150px;
+  padding-bottom: 124px;
+  position: relative;
 }
 
 .powering-the-future > div {
@@ -241,6 +264,10 @@ section {
   background-color: var(--card-bg);
   height: fit-content;
   padding: 32px;
+}
+
+.card p {
+  line-height: 20px;
 }
 
 .powering-the-future .card {
@@ -257,6 +284,7 @@ section {
 .powering-the-future .card h3 {
   font-size: 28px;
   line-height: 32px;
+  letter-spacing: -1px;
 }
 
 .card-number {
@@ -278,18 +306,26 @@ section {
   border-radius: 8px;
 }
 
+.connector-line {
+  display: none;
+  position: absolute;
+}
+
+/* ---------------------------------------------------- */
 /* OUR MISSION */
 .our-mission {
   /* padding-inline: var(--padding); */
-  margin-top: 8.25em;
+  /* margin-top: 9px; */
   height: 764px;
   text-align: center;
   position: relative;
+  background: #101725;
+  z-index: -1;
 }
 
 .our-mission .mission-bg {
-  transform: perspective(100px) translate3d(0px, -66px, 100px)
-    scale3d(0.86, 0.75, 1);
+  transform: perspective(300px) translate3d(0px, -66px, 96px)
+    scale3d(0.86, 0.75, 1) translateY(170px);
   width: 100%;
 }
 
@@ -301,6 +337,7 @@ section {
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
+  padding-top: 132px;
 }
 
 .our-mission p {
@@ -317,6 +354,230 @@ section {
   margin-inline: auto;
 }
 
+#tokenomics {
+  background: var(--body-bg);
+  z-index: 99999;
+  padding-block: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #1f2937;
+}
+
+#tokenomics .title {
+  margin-bottom: 4rem;
+}
+
+#tokenomics > div {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* justify-content: center;
+  align-items: center; */
+  font-size: 18px;
+  gap: 42px 20px;
+}
+
+#tokenomics .card .figure {
+  color: var(--text-color);
+}
+
+#tokenomics .team-marketing-group,
+#tokenomics .team-marketing-group section {
+  display: flex;
+  align-items: center;
+}
+
+#tokenomics .team-marketing-group {
+  justify-content: center;
+  gap: 24px;
+}
+
+#tokenomics .team-marketing-group section {
+  --padding: 0;
+  width: fit-content;
+  gap: 16px;
+}
+
+#tokenomics .card {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  border: 1.41148px dashed #454fda;
+  border-radius: 14.1148px 14.11px 14.11px 14.1148px;
+}
+
+/* ------------------------------------------------------- */
+/* OUR ROADMAP */
+#roadmap {
+  padding-block: 9.2rem 5.5rem;
+  /* padding-block: 5em 3em; */
+  background: linear-gradient(360deg, #0f1522 0%, rgba(16, 23, 37, 0) 88.29%);
+  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+
+#roadmap .title {
+  margin-bottom: 2em;
+}
+
+#roadmap > div {
+  display: grid;
+  gap: 20px;
+  font-size: 16px;
+}
+
+#roadmap .phase-no {
+  border: 3px solid #454fda;
+  /* padding: 14px 10px; */
+  width: 63px;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 400;
+  font-size: 30.5455px;
+  line-height: 38px;
+  margin-bottom: 61px;
+}
+
+#roadmap .card h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 64px;
+}
+
+#roadmap li {
+  margin-left: 21px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+#roadmap p {
+  margin-top: 2.5rem;
+  color: var(--text-color);
+}
+
+/* ------------------------------------------------------ */
+#how-to-buy {
+  padding-block: 4rem;
+}
+
+#how-to-buy .title {
+  margin-bottom: 42px;
+}
+
+#how-to-buy > div {
+  display: grid;
+  gap: 20px;
+}
+
+#how-to-buy .card {
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#how-to-buy .card .step-tag {
+  color: #a2a8fc;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#how-to-buy .card h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+#how-to-buy .card p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+.contract-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.contract-address h1 {
+  word-break: break-all;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 34px;
+}
+
+.contract-address button {
+  cursor: pointer;
+  background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+  border-radius: 40px;
+  padding: 18px 31px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 25px;
+}
+
+/* ------------------------------------------------------- */
+footer {
+  padding-block: 146px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 42px;
+}
+
+.footer-logo {
+  width: 170px;
+  margin-inline: auto;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f9fafb;
+}
+
+.social-media-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 91px;
+}
+
+.social-media-links img{
+  width: 24px;
+}
+
+/* ------------------------------------------------------- */
+/* TABLET SCREEN SIZES */
+
 @media screen and (min-width: 768px) {
   header {
     --padding: 2.5rem 4rem;
@@ -324,11 +585,11 @@ section {
 
   section {
     --padding: 4rem;
-    padding-block: 9.375em;
+    /* padding-block: 9.375em; */
   }
 
   .hero-section {
-    height: 900px;
+    /* height: 900px; */
     margin-block: 6.5em 0;
     padding-inline: 2rem;
   }
@@ -340,14 +601,23 @@ section {
 
   .hero-bg {
     height: 552px !important;
-    transform: perspective(800px) translate3d(0px, -66px, 128px) rotateX(40deg)
-      scale3d(0.86, 0.75, 1) translateY(80px) translateX(-40px) !important;
+    transform: perspective(1000px) translate3d(0px, -33px, 358px) rotateX(40deg)
+      scale3d(0.86, 0.75, 1) translateY(290px) !important;
   }
 
+  .hero-img {
+    width: 542px;
+  }
+
+  /* section titles */
   .title {
     --section-title-font-size: 3.25em;
     line-height: 64px;
     padding-inline: var(--padding);
+  }
+
+  .powering-the-future {
+    height: 1027px;
   }
 
   .powering-the-future > div {
@@ -359,11 +629,40 @@ section {
   }
 
   /* OUR MISSION */
-  .our-mission {
-    /* --padding: 10em ; */
+
+  .our-mission .mission-bg {
+    transform: perspective(300px) translate3d(0px, -66px, 128px)
+      scale3d(0.86, 0.75, 1) translateY(170px);
+    width: 100%;
   }
 
+  #tokenomics,
+  #roadmap,
+  #how-to-buy {
+    padding-block: 150px 92px;
+  }
 
+  #tokenomics > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #tokenomics .card {
+    padding: 32px;
+  }
+
+  #roadmap .title {
+    margin-bottom: 5.625rem;
+  }
+
+  /* --------------------------------------------------------- */
+  /* HOW TO BUY */
+  /* #how-to-buy {
+    padding-block: 9.375rem 4.5rem;
+  } */
+
+  #how-to-buy .card {
+    padding-block: 75px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -393,10 +692,20 @@ section {
     display: none;
   }
 
+  .hero-section {
+    padding-bottom: 12rem;
+  }
+
   .hero-container {
     grid-template-columns: repeat(2, 50%);
     align-items: center;
     padding-inline: 6.6em;
+  }
+
+  .hero-bg {
+    height: 552px !important;
+    transform: perspective(1000px) translate3d(0px, -33px, 258px) rotateX(40deg)
+      scale3d(0.86, 0.75, 1) translateY(190px) !important;
   }
 
   .hero-img {
@@ -411,10 +720,25 @@ section {
 
   .powering-the-future > div {
     grid-template-columns: repeat(4, 1fr);
+    padding-inline: 6.25em;
   }
 
-  .powering-the-future .card{
+  .powering-the-future .title {
+    width: 626px;
+    margin-inline: auto;
+  }
+
+  .powering-the-future .card {
     height: fit-content;
+    width: 313px;
+  }
+
+  .powering-the-future .card h3 {
+    line-height: 64px;
+  }
+
+  .powering-the-future .card-3 h3 {
+    line-height: 32px;
   }
 
   .powering-the-future .card-1 {
@@ -427,23 +751,99 @@ section {
     place-self: end;
   }
 
+  /* ---------------------------------------------------------- */
   /* OUR MISSION */
-  .our-mission {
-    /* --padding: 19.75em; */
-  }
 
   .our-mission .mission-bg {
-    transform: perspective(300px) translate3d(0px, -66px, 128px)
-      scale3d(0.86, 0.75, 1);
+    transform: perspective(300px) translate3d(0px, -66px, 65px)
+      scale3d(0.86, 0.75, 1) translateY(170px);
     width: 100%;
   }
 
   .our-mission .container {
     width: 946px;
-    z-index: -1;
+    height: 764px;
+    /* z-index: -1; */
   }
 
   .our-mission .mission-asset {
     width: 946px;
+  }
+
+  /* OUR ROADMAP */
+
+  #roadmap > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #roadmap .card {
+    height: 515px;
+  }
+
+  /* HOW TO BUY */
+  #how-to-buy {
+    --padding: 0;
+  }
+
+  #how-to-buy > div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  #how-to-buy .card {
+    height: 512px;
+  }
+
+  #how-to-buy .card.step-one {
+    padding-left: 100px;
+  }
+
+  #how-to-buy .card.step-two {
+    padding-left: 80px;
+  }
+
+  #how-to-buy .card.step-three {
+    /* padding-right: 100px; */
+    padding-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .connector-line {
+    display: unset;
+    position: absolute;
+  }
+
+  #connector-line-1 {
+    left: 192.5px;
+    top: 757px;
+  }
+
+  #connector-line-2 {
+    top: 346px;
+    left: 525.5px;
+  }
+  #connector-line-3 {
+    left: 858.5px;
+    /* top: 687px; */
+    top: 703px;
+    /* left: 922.5px;
+    top: 687px; */
+  }
+
+  #how-to-buy .card {
+    height: 427px;
+  }
+
+  #how-to-buy .card.step-one {
+    padding-left: 153px;
+  }
+
+  #how-to-buy .card.step-two {
+    padding-left: 105px;
+  }
+
+  #how-to-buy .card.step-three {
+    padding-right: 154px;
   }
 }
