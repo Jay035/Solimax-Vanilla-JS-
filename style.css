@@ -30,6 +30,30 @@ body {
   width: 100%;
 }
 
+a {
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease-in;
+}
+
+a:hover {
+  background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.bold {
+  color: #a2a8fc;
+  font-weight: 500;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -71,21 +95,6 @@ nav > .menu {
 
 .menu a {
   color: var(--white);
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background: linear-gradient(
-    90.72deg,
-    rgba(107, 3, 184, 0.9) 21.79%,
-    rgba(168, 24, 186, 0.9) 54.77%,
-    rgba(226, 43, 187, 0.9) 85.69%
-  );
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 /* HAMBURGER ICON */
@@ -160,26 +169,47 @@ section {
 .hero-section {
   margin-top: 6.5em;
   position: relative;
+  /* background-color: #000000; */
+  /* height: 100%; */
   /* height: 1009px; */
   width: 100%;
   padding-inline: 0;
 }
 
+.img-overlay {
+  position: absolute;
+  top: 605px;
+  left: 0;
+  width: 1636px;
+  height: 145px;
+  background-color: #090e17;
+  opacity: 0.7;
+  filter: blur(25px);
+  z-index: 99999;
+}
+
 .hero-container {
   position: absolute;
   top: 0;
-  display: grid;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1.4em;
+  gap: 2rem;
+  width: 100%;
+  text-align: center;
+  align-items: center;
   padding-inline: 2em;
 }
 
 .hero-bg {
+  overflow-x: hidden;
   height: 700px;
   width: 100%;
   overflow-x: hidden;
-  transform: perspective(300px) translate3d(0px, -66px, 48px)
-    scale3d(0.86, 0.75, 1) translateY(480px);
+  transform: perspective(300px) translate3d(0px, -66px, 42px)
+    scale3d(0.86, 0.75, 1) translateY(180px);
 }
 
 .hero-img {
@@ -187,22 +217,24 @@ section {
   /* height: 613px;  */
 }
 
-.hero-container .left-col {
+/* .hero-container .left-col {
   display: flex;
   flex-direction: column;
   gap: 32px;
-}
+} */
 
 .hero-container .hero-title {
-  font-size: 2.5em;
-  line-height: 50px;
+  letter-spacing: -2px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
 }
 
-.left-col p {
+.hero-container p {
   color: #9ca3af;
   font-size: 18px;
   font-weight: 400;
-  line-height: 30.6px;
+  line-height: 31px;
 }
 
 /* HERO BTN */
@@ -216,6 +248,17 @@ section {
   border-radius: 40px;
   border: none;
   width: 285px;
+  margin-top: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(
+    200deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
 }
 
 .hero-btn a {
@@ -231,13 +274,16 @@ section {
   line-height: 25px;
 }
 
-/* POWERING THE FUTURE OF SMART CONTRACTS */
+/* SECTION TITLES */
 .title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: var(--section-title-font-size);
   line-height: 44px;
   text-align: center;
 }
+
+/* ------------------------------------------------------- */
+/* POWERING THE FUTURE OF SMART CONTRACTS */
 
 .powering-the-future {
   /* margin-top: -9em; */
@@ -297,7 +343,12 @@ section {
 
 .powering-the-future .card-3 {
   border: 2px solid transparent;
-  border-image: linear-gradient(80.6deg, #6b03b8 90%, #a818ba 90%, #e22bbb 90%)
+  border-image: linear-gradient(
+      90.72deg,
+      rgba(107, 3, 184, 0.9) 21.79%,
+      rgba(168, 24, 186, 0.9) 54.77%,
+      rgba(226, 43, 187, 0.9) 85.69%
+    )
     1;
   /* background: 
   linear-gradient(#d9d9d908, #000) padding-box,
@@ -314,9 +365,7 @@ section {
 /* ---------------------------------------------------- */
 /* OUR MISSION */
 .our-mission {
-  /* padding-inline: var(--padding); */
-  /* margin-top: 9px; */
-  height: 764px;
+  height: 1400px;
   text-align: center;
   position: relative;
   background: #101725;
@@ -324,8 +373,8 @@ section {
 }
 
 .our-mission .mission-bg {
-  transform: perspective(300px) translate3d(0px, -66px, 96px)
-    scale3d(0.86, 0.75, 1) translateY(170px);
+  transform: perspective(300px) translate3d(0px, -66px, 79px)
+    scale3d(0.86, 0.75, 1) translateY(729px);
   width: 100%;
 }
 
@@ -340,8 +389,22 @@ section {
   padding-top: 132px;
 }
 
-.our-mission p {
+.our-mission .container > div,
+.our-mission .container > div div {
+  display: flex;
+  flex-direction: column;
   margin-top: 21px;
+}
+
+.our-mission .container > div {
+  gap: 30px;
+}
+
+.our-mission .container > div div {
+  gap: 5px;
+}
+
+.our-mission p {
   color: var(--text-color);
   font-weight: 400;
   font-size: 18px;
@@ -381,13 +444,13 @@ section {
   color: var(--text-color);
 }
 
-#tokenomics .team-marketing-group,
+/* #tokenomics .team-marketing-group,
 #tokenomics .team-marketing-group section {
   display: flex;
   align-items: center;
-}
+} */
 
-#tokenomics .team-marketing-group {
+/* #tokenomics .team-marketing-group {
   justify-content: center;
   gap: 24px;
 }
@@ -396,7 +459,7 @@ section {
   --padding: 0;
   width: fit-content;
   gap: 16px;
-}
+} */
 
 #tokenomics .card {
   width: 100%;
@@ -454,7 +517,8 @@ section {
 
 #roadmap p {
   margin-top: 2.5rem;
-  color: var(--text-color);
+  color: #a2a8fc;
+  font-weight: 500;
 }
 
 /* ------------------------------------------------------ */
@@ -475,7 +539,7 @@ section {
   border: 1px solid #1f2937;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 #how-to-buy .card .step-tag {
@@ -487,14 +551,14 @@ section {
 
 #how-to-buy .card h1 {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 46px;
 }
 
 #how-to-buy .card p {
   color: var(--text-color);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 31px;
 }
 
@@ -511,7 +575,7 @@ section {
   word-break: break-all;
   text-align: center;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 34px;
 }
 
@@ -528,13 +592,13 @@ section {
   padding: 18px 31px;
   color: var(--white);
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 1.1em;
   line-height: 25px;
 }
 
 /* ------------------------------------------------------- */
 footer {
-  padding-block: 146px;
+  padding: 146px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -550,6 +614,9 @@ footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  /* max-width: 300px; */
+  margin-inline: auto;
   gap: 24px;
   flex-wrap: wrap;
   list-style: none;
@@ -565,7 +632,7 @@ footer a {
   color: #f9fafb;
 }
 
-.social-media-links{
+.social-media-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,7 +640,7 @@ footer a {
   margin-top: 91px;
 }
 
-.social-media-links img{
+.social-media-links img {
   width: 24px;
 }
 
@@ -596,15 +663,24 @@ footer a {
     padding-inline: 2rem;
   }
 
+  .img-overlay {
+    top: 730px;
+  }
+
+  .hero-container {
+    gap: 1.4em;
+    justify-content: center;
+  }
+
   .hero-container .hero-title {
     font-size: 3.5em !important;
     line-height: 80px !important;
   }
 
   .hero-bg {
-    height: 552px !important;
-    transform: perspective(1000px) translate3d(0px, -33px, 358px) rotateX(40deg)
-      scale3d(0.86, 0.75, 1) translateY(290px) !important;
+    height: 1021.47px !important;
+    /* transform: perspective(1000px) translate3d(0px, -33px, 358px) rotateX(40deg)
+      scale3d(0.86, 0.75, 1) translateY(290px) !important; */
   }
 
   .hero-img {
@@ -615,11 +691,15 @@ footer a {
   .title {
     --section-title-font-size: 3.25em;
     line-height: 64px;
-    padding-inline: var(--padding);
+    /* padding-inline: var(--padding); */
   }
 
   .powering-the-future {
     height: 1027px;
+  }
+
+  .powering-the-future .title {
+    padding-top: 0;
   }
 
   .powering-the-future > div {
@@ -631,6 +711,10 @@ footer a {
   }
 
   /* OUR MISSION */
+
+  .our-mission {
+    height: 1029px;
+  }
 
   .our-mission .mission-bg {
     transform: perspective(300px) translate3d(0px, -66px, 128px)
@@ -664,6 +748,27 @@ footer a {
 
   #how-to-buy .card {
     padding-block: 75px;
+    gap: 30px;
+  }
+
+  #how-to-buy .card .step-tag {
+    font-size: 14px;
+  }
+
+  #how-to-buy .card h1 {
+    font-size: 32px;
+  }
+
+  #how-to-buy .card p {
+    font-size: 18px;
+  }
+
+  .contract-address h1 {
+    font-size: 2em;
+  }
+
+  .contract-address button {
+    font-size: 1.125em;
   }
 }
 
@@ -694,20 +799,30 @@ footer a {
     display: none;
   }
 
-  .hero-section {
-    padding-bottom: 12rem;
+  section {
+    --padding: 6.5rem;
   }
+  /* .hero-section {
+    padding-bottom: 12rem;
+  } */
 
   .hero-container {
-    grid-template-columns: repeat(2, 50%);
+    width: 900px;
+    /* grid-template-columns: repeat(2, 50%); */
     align-items: center;
-    padding-inline: 6.6em;
+
+    padding-inline: 0;
+    /* padding-inline: 6.6em; */
   }
 
   .hero-bg {
-    height: 552px !important;
-    transform: perspective(1000px) translate3d(0px, -33px, 258px) rotateX(40deg)
-      scale3d(0.86, 0.75, 1) translateY(190px) !important;
+    transform: perspective(300px) translate3d(0px, -66px, 58px)
+      scale3d(0.86, 0.75, 1) translateY(160px);
+    /* height: 552px !important; */
+  }
+
+  .img-overlay {
+    /* top: ; */
   }
 
   .hero-img {
@@ -716,41 +831,13 @@ footer a {
   }
 
   .hero-container .hero-title {
-    font-size: 4.7em !important;
-    line-height: 80px !important;
-  }
-
-  .powering-the-future > div {
-    grid-template-columns: repeat(4, 1fr);
-    padding-inline: 6.25em;
+    /* font-size: 50px; */
+    /* line-height: 80px !important; */
   }
 
   .powering-the-future .title {
-    width: 626px;
+    width: 745px;
     margin-inline: auto;
-  }
-
-  .powering-the-future .card {
-    height: fit-content;
-    width: 313px;
-  }
-
-  .powering-the-future .card h3 {
-    line-height: 64px;
-  }
-
-  .powering-the-future .card-3 h3 {
-    line-height: 32px;
-  }
-
-  .powering-the-future .card-1 {
-    height: 353px;
-    justify-content: flex-end;
-  }
-
-  .powering-the-future .card-2,
-  .powering-the-future .card-4 {
-    place-self: end;
   }
 
   /* ---------------------------------------------------------- */
@@ -779,6 +866,99 @@ footer a {
   }
 
   #roadmap .card {
+    height: 626px;
+  }
+
+  /* HOW TO BUY */
+  /* #how-to-buy {
+    --padding: 0;
+  } */
+
+  #how-to-buy > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #how-to-buy .card {
+    height: 360px;
+  }
+
+  /* #how-to-buy .card.step-one {
+    padding-left: 100px;
+  }
+
+  #how-to-buy .card.step-two {
+    padding-left: 80px;
+  }
+
+  #how-to-buy .card.step-four {
+    /* padding-right: 100px; */
+    /* padding-left: 80px; */
+  /* }  */
+}
+
+@media screen and (min-width: 1300px) {
+  .img-overlay {
+    position: absolute;
+    top: 900px;
+  }
+
+  .powering-the-future .title {
+    padding-top: 150px;
+    width: 1000px;
+  }
+
+  .powering-the-future > div {
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 6.25em;
+  }
+
+  .powering-the-future .card {
+    width: 313px;
+  }
+
+  .powering-the-future .card {
+    height: fit-content;
+  }
+
+  .powering-the-future .card h3 {
+    line-height: 64px;
+  }
+
+  .powering-the-future .card-3 h3 {
+    line-height: 32px;
+  }
+
+  .powering-the-future .card-1 {
+    height: 353px;
+    justify-content: flex-end;
+  }
+
+  .powering-the-future .card-2,
+  .powering-the-future .card-4 {
+    place-self: end;
+  }
+
+  .connector-line {
+    display: unset;
+    position: absolute;
+  }
+
+  #connector-line-1 {
+    left: 192.5px;
+    top: 823px;
+  }
+
+  #connector-line-2 {
+    top: 407px;
+    left: 525.5px;
+  }
+
+  #connector-line-3 {
+    left: 858.5px;
+    top: 765px;
+  }
+
+  #roadmap .card {
     height: 515px;
   }
 
@@ -788,49 +968,8 @@ footer a {
   }
 
   #how-to-buy > div {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
-  }
-
-  #how-to-buy .card {
-    height: 512px;
-  }
-
-  #how-to-buy .card.step-one {
-    padding-left: 100px;
-  }
-
-  #how-to-buy .card.step-two {
-    padding-left: 80px;
-  }
-
-  #how-to-buy .card.step-three {
-    /* padding-right: 100px; */
-    padding-left: 80px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .connector-line {
-    display: unset;
-    position: absolute;
-  }
-
-  #connector-line-1 {
-    left: 192.5px;
-    top: 757px;
-  }
-
-  #connector-line-2 {
-    top: 346px;
-    left: 525.5px;
-  }
-  #connector-line-3 {
-    left: 858.5px;
-    /* top: 687px; */
-    top: 703px;
-    /* left: 922.5px;
-    top: 687px; */
   }
 
   #how-to-buy .card {
@@ -845,7 +984,7 @@ footer a {
     padding-left: 105px;
   }
 
-  #how-to-buy .card.step-three {
+  #how-to-buy .card.step-four {
     padding-right: 154px;
   }
 }
