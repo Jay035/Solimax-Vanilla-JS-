@@ -704,21 +704,21 @@ section {
 }
 
 .message{
-  padding: 10px 20px;
-  border-radius: 8px;
+  /* padding: 10px 20px;
+  border-radius: 8px; */
   position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  transition: all 0.3s ease;
+  bottom: 2rem;
+  /* right: 2rem; */
+  font-weight: 300;
 }
 
-.success-message{
+/* .success-message{
   background-color: rgba(0, 128, 0, 0.726);
 }
 
 .error-message{
   background-color: rgba(255, 0, 0, 0.527);
-}
+} */
 
 /* ------------------------------------------------------- */
 /* FOOTER */
