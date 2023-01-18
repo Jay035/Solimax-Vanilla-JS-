@@ -385,7 +385,7 @@ section {
   flex-direction: column;
 }
 
-.powering-the-future .card h3 {
+.card h3 {
   font-weight: 400;
   font-size: 18px;
   line-height: 64px;
@@ -554,6 +554,8 @@ section {
 }
 
 #roadmap .phase-no {
+  font-weight: 400;
+  line-height: 38px;
   border: 3px solid #454fda;
   /* padding: 14px 10px; */
   width: 63px;
@@ -562,17 +564,14 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-weight: 400;
-  font-size: 30.5455px;
-  line-height: 38px;
   margin-bottom: 61px;
 }
 
-#roadmap .card h3 {
+/* #roadmap .card h3 {
   font-weight: 400;
   font-size: 32px;
   line-height: 64px;
-}
+} */
 
 #roadmap li {
   margin-left: 21px;
@@ -616,7 +615,7 @@ section {
 
 #how-to-buy .card h1 {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 46px;
 }
 
@@ -637,11 +636,11 @@ section {
 }
 
 .contract-address h1 {
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 34px;
   word-break: break-all;
   text-align: center;
-  font-weight: 400;
-  font-size: 1.6em;
-  line-height: 34px;
 }
 
 .contract-address button {
@@ -657,7 +656,7 @@ section {
   padding: 18px 31px;
   color: var(--white);
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 25px;
 }
 
@@ -820,6 +819,10 @@ footer a {
     margin-bottom: 5.625rem;
   }
 
+  #roadmap .phase-no {
+    font-size: 30.5455px;
+  }
+
   /* --------------------------------------------------------- */
   /* HOW TO BUY */
   /* #how-to-buy {
@@ -836,7 +839,8 @@ footer a {
   }
 
   #how-to-buy .card h1 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 36px;
   }
 
   #how-to-buy .card p {
@@ -961,6 +965,15 @@ footer a {
 
   #how-to-buy .card {
     height: 360px;
+  }
+
+  #how-to-buy .card h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .contract-address button{
+    font-size: 1.1em;
   }
 
   /* #how-to-buy .card.step-one {
