@@ -33,59 +33,60 @@ body {
 /* ------------------------------------------------------ */
 /* PRELOADER  */
 
-#preloader{
+#preloader {
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-#preloader svg #one{
+#preloader svg #one {
   animation: animation1 2s ease 3s infinite normal none;
 }
 
-#preloader svg #two{
+#preloader svg #two {
   animation: animation1 2s ease 3s infinite reverse none;
 }
 
-#preloader svg #three{
+#preloader svg #three {
   animation: animation1 2s ease 3s infinite normal none;
 }
 
-#preloader svg #four{
+#preloader svg #four {
   animation: animation1 2s ease 3s infinite reverse none;
 }
 
-#preloader svg #five{
+#preloader svg #five {
   animation: animation1 2s ease 3s infinite normal none;
 }
 
-#preloader svg #six{
+#preloader svg #six {
   animation: animation1 2s ease 3s infinite reverse none;
 }
 
-#preloader svg #seven{
+#preloader svg #seven {
   animation: animation1 2s ease 3s infinite normal none;
 }
 
-#preloader svg #eight{
+#preloader svg #eight {
   animation: animation1 2s ease 3s infinite reverse none;
 }
-
 
 @keyframes animation1 {
-  0%,50%,100% {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
 
-  25%,75% {
+  25%,
+  75% {
     opacity: 0;
   }
-  
 }
 
 /* ------------------------------------------------------ */
@@ -269,7 +270,7 @@ section {
   width: 100%;
   overflow-x: hidden;
   transform: perspective(300px) translate3d(0px, -66px, 33px)
-  scale3d(0.86, 0.75, 1) translateY(289px) rotateX(2deg);
+    scale3d(0.86, 0.75, 1) translateY(289px) rotateX(2deg);
 }
 
 /* .hero-img {
@@ -369,7 +370,7 @@ section {
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: var(--text-color);
 }
@@ -470,10 +471,10 @@ section {
 }
 
 .our-mission p {
-  color: var(--text-color);
+  /* font-size: 17px; */
   font-weight: 400;
-  font-size: 18px;
   line-height: 31px;
+  color: var(--text-color);
 }
 
 .our-mission .mission-asset {
@@ -751,7 +752,7 @@ footer a {
     width: 542px;
   } */
 
-  .hero-container p{
+  .hero-container p {
     width: 615px;
   }
 
@@ -799,6 +800,10 @@ footer a {
     transform: perspective(300px) translate3d(0px, -66px, 128px)
       scale3d(0.86, 0.75, 1) translateY(170px);
     width: 100%;
+  }
+
+  .our-mission p {
+    font-size: 18px;
   }
 
   #tokenomics,
@@ -972,7 +977,7 @@ footer a {
     line-height: 48px;
   }
 
-  .contract-address button{
+  .contract-address button {
     font-size: 1.1em;
   }
 
