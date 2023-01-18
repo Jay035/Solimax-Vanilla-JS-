@@ -493,10 +493,12 @@
       <!-- WALLET ADDRESS -->
       <section class="contract-address">
         <h1>0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6</h1>
-        <button>
+        <button onclick="copyToClipboard()">
           Copy Contract Address
           <img src="./assets/icons/copy-icon.svg" alt="copy icon" />
         </button>
+        <div class="message success-message hidden">Copied to clipboard</div>
+        <div class="message error-message hidden">Error !</div>
       </section>
 
       <!-- FOOTER -->
