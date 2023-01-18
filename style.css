@@ -7,7 +7,7 @@
   --card-bg: #d9d9d908;
   --text-color: #9ca3af;
 
-  --padding: 2.5rem;
+  --padding: 2rem;
   --section-title-font-size: 2em;
 }
 
@@ -28,12 +28,18 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
   width: 100%;
+  position: relative;
 }
 
 /* ------------------------------------------------------ */
 /* PRELOADER  */
 
 #preloader {
+  position: absolute;
+  z-index: 99999999;
+  width: 100%;
+  height: 100vh;
+  background: var(--body-bg);
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -44,36 +50,40 @@ body {
   min-height: 100vh;
 }
 
+#preloader svg circle {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
 #preloader svg #one {
-  animation: animation1 2s ease 3s infinite normal none;
+  animation: animation1 2s ease 0s infinite normal none;
 }
 
 #preloader svg #two {
-  animation: animation1 2s ease 3s infinite reverse none;
+  animation: animation1 2s ease 0s infinite reverse none;
 }
 
 #preloader svg #three {
-  animation: animation1 2s ease 3s infinite normal none;
+  animation: animation1 2s ease 0s infinite normal none;
 }
 
 #preloader svg #four {
-  animation: animation1 2s ease 3s infinite reverse none;
+  animation: animation1 2s ease 0s infinite reverse none;
 }
 
 #preloader svg #five {
-  animation: animation1 2s ease 3s infinite normal none;
+  animation: animation1 2s ease 0s infinite normal none;
 }
 
 #preloader svg #six {
-  animation: animation1 2s ease 3s infinite reverse none;
+  animation: animation1 2s ease 0s infinite reverse none;
 }
 
 #preloader svg #seven {
-  animation: animation1 2s ease 3s infinite normal none;
+  animation: animation1 2s ease 0s infinite normal none;
 }
 
 #preloader svg #eight {
-  animation: animation1 2s ease 3s infinite reverse none;
+  animation: animation1 2s ease 0s infinite reverse none;
 }
 
 @keyframes animation1 {
@@ -93,12 +103,13 @@ body {
 
 a {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
-  transition: color 0.3s ease-in;
+  transition: all 0.3s ease;
 }
 
-a:hover {
+nav a:hover,
+footer a:hover {
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -120,7 +131,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--padding);
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+
+.nav-logo {
+  width: 112.73px;
 }
 
 nav > .menu {
@@ -178,7 +196,7 @@ nav > .menu {
 
 .hamburger span {
   background-color: var(--white);
-  width: 40px;
+  width: 36px;
   height: 3px;
   margin-bottom: 8px;
   display: block;
@@ -228,18 +246,19 @@ section {
 
 /* HERO SECTION */
 .hero-section {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   position: relative;
+  /* top: 4rem; */
   /* background-color: #000000; */
   /* height: 100%; */
-  /* height: 1009px; */
+  height: 1110px;
   width: 100%;
   padding-inline: 0;
 }
 
 .img-overlay {
   position: absolute;
-  top: 470px;
+  top: 917px;
   left: 0;
   width: 100%;
   height: 150px;
@@ -253,6 +272,7 @@ section {
   position: absolute;
   top: 0;
   left: 50%;
+  padding-block: 225px 110px;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -261,16 +281,22 @@ section {
   width: 100%;
   text-align: center;
   align-items: center;
-  padding-inline: 2em;
+  padding-inline: var(--padding);
+  background: url('./assets/images//hero-pattern.png') center;
+  background-size: cover;
+}
+
+.hero-container > div {
+
 }
 
 .hero-bg {
   overflow-x: hidden;
-  height: 600px;
+  height: 463px;
   width: 100%;
   overflow-x: hidden;
-  transform: perspective(300px) translate3d(0px, -66px, 33px)
-    scale3d(0.86, 0.75, 1) translateY(289px) rotateX(2deg);
+  transform: perspective(300px) translate3d(0px, -66px, 42px)
+  scale3d(0.86, 0.75, 1) translateY(816px);
 }
 
 /* .hero-img {
@@ -336,6 +362,7 @@ section {
   font-weight: 400;
   font-size: var(--section-title-font-size);
   line-height: 44px;
+  letter-spacing: -1.68px;
   text-align: center;
 }
 
@@ -343,7 +370,7 @@ section {
 /* POWERING THE FUTURE OF SMART CONTRACTS */
 
 .powering-the-future {
-  /* margin-top: -9em; */
+  /* margin-top: 5em; */
   /* margin-bottom: 269px; */
   /* padding-top: 150px; */
   /* height: 1027px; */
@@ -352,14 +379,14 @@ section {
 }
 
 .powering-the-future .title {
-  padding-top: 150px;
-  padding-bottom: 112px;
+  padding-top: 74px;
+  padding-bottom: 92px;
   position: relative;
 }
 
 .powering-the-future > div {
   display: grid;
-  place-content: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -371,7 +398,7 @@ section {
 
 .card p {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 26px;
   color: var(--text-color);
 }
 
@@ -384,11 +411,12 @@ section {
   max-width: 550px;
   /* height: 281px; */
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 64px;
   letter-spacing: -1px;
 }
@@ -431,7 +459,7 @@ section {
 /* ---------------------------------------------------- */
 /* OUR MISSION */
 .our-mission {
-  height: 1400px;
+  height: 1260px;
   text-align: center;
   position: relative;
   background: #101725;
@@ -612,12 +640,13 @@ section {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
+  letter-spacing: 0;
 }
 
 #how-to-buy .card h1 {
   font-weight: 400;
   font-size: 20px;
-  line-height: 46px;
+  line-height: 36px;
 }
 
 #how-to-buy .card p {
@@ -659,11 +688,15 @@ section {
   font-weight: 500;
   font-size: 1em;
   line-height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
 
 /* ------------------------------------------------------- */
+/* FOOTER */
 footer {
-  padding: 146px 24px;
+  padding: 70px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -723,16 +756,17 @@ footer a {
   }
 
   .hero-section {
-    /* height: 900px; */
-    margin-block: 6.5rem 0;
+    height: 1180px;
+    margin-block: 0 0 6.5rem;
     padding-inline: 2rem;
   }
 
   .img-overlay {
-    top: 730px;
+    top: 986px;
   }
 
   .hero-container {
+    padding-block: 225px 88px;
     gap: 1.4em;
     justify-content: center;
   }
@@ -743,9 +777,9 @@ footer a {
   }
 
   .hero-bg {
-    height: 1021.47px !important;
-    /* transform: perspective(1000px) translate3d(0px, -33px, 358px) rotateX(40deg)
-      scale3d(0.86, 0.75, 1) translateY(290px) !important; */
+    /* height: 1021.47px !important; */
+    transform: perspective(300px) translate3d(0px, -66px, 62px)
+  scale3d(0.86, 0.75, 1) translateY(816px);
   }
 
   /* .hero-img {
@@ -769,11 +803,12 @@ footer a {
   }
 
   .powering-the-future {
-    height: 1027px;
+    padding-block: 20px 13rem;
   }
 
   .powering-the-future .title {
     padding-top: 0;
+    padding-bottom: 160px;
   }
 
   .powering-the-future > div {
@@ -788,6 +823,7 @@ footer a {
   .powering-the-future .card h3 {
     /* font-size: 28px; */
     line-height: 32px;
+    margin-bottom: 1em;
   }
 
   /* OUR MISSION */
@@ -797,7 +833,7 @@ footer a {
   }
 
   .our-mission .mission-bg {
-    transform: perspective(300px) translate3d(0px, -66px, 128px)
+    transform: perspective(133px) translate3d(0px, -66px, 37px)
       scale3d(0.86, 0.75, 1) translateY(170px);
     width: 100%;
   }
@@ -848,9 +884,9 @@ footer a {
     line-height: 36px;
   }
 
-  #how-to-buy .card p {
+  /* #how-to-buy .card p {
     font-size: 18px;
-  }
+  } */
 
   .contract-address h1 {
     font-size: 2em;
@@ -861,6 +897,7 @@ footer a {
   }
 }
 
+/* LAPTOP SCREENS */
 @media screen and (min-width: 1000px) {
   header {
     --padding: 2.5rem 6.25rem;
@@ -896,22 +933,22 @@ footer a {
   } */
 
   .hero-container {
-    width: 900px;
+    /* width: 900px; */
     /* grid-template-columns: repeat(2, 50%); */
     align-items: center;
 
-    padding-inline: 0;
+    --padding: 334px;
     /* padding-inline: 6.6em; */
   }
 
   .hero-bg {
     transform: perspective(300px) translate3d(0px, -66px, 58px)
-      scale3d(0.86, 0.75, 1) translateY(160px);
+      scale3d(0.86, 0.75, 1) translateY(759px);
     /* height: 552px !important; */
   }
 
   .img-overlay {
-    top: 420px;
+    top: 850px;
     height: 220px;
   }
 
@@ -932,6 +969,9 @@ footer a {
 
   /* ---------------------------------------------------------- */
   /* OUR MISSION */
+  /* .our-mission{
+    height: 1400px;
+  } */
 
   .our-mission .mission-bg {
     transform: perspective(300px) translate3d(0px, -66px, 65px)
@@ -956,7 +996,7 @@ footer a {
   }
 
   #roadmap .card {
-    height: 626px;
+    height: 660px;
   }
 
   /* HOW TO BUY */
@@ -973,8 +1013,8 @@ footer a {
   }
 
   #how-to-buy .card h1 {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 35px;
   }
 
   .contract-address button {
@@ -993,16 +1033,19 @@ footer a {
     /* padding-right: 100px; */
   /* padding-left: 80px; */
   /* }  */
+
+  /* footer {
+    padding: 146px 24px;
+  } */
 }
 
 @media screen and (min-width: 1300px) {
   .img-overlay {
-    /* position: absolute; */
-    top: 788px;
+    top: 850px;
   }
 
   .powering-the-future .title {
-    padding-top: 150px;
+    /* padding-top: 150px; */
     width: 1000px;
   }
 
@@ -1011,51 +1054,19 @@ footer a {
     /* padding-inline: 6.25em; */
   }
 
-  /* .powering-the-future .card {
-    width: 313px;
-  } */
-
   .powering-the-future .card {
-    height: fit-content;
+    width: 100%;
+    /* height: 281px; */
   }
+
+  /* .powering-the-future .card {
+    height: 100%;
+  } */
 
   .powering-the-future .card h3 {
-    line-height: 64px;
-  }
-
-  /* .powering-the-future .card-3 h3 {
     line-height: 32px;
-  } */
-
-  .powering-the-future .card-1 {
-    height: 353px;
-    justify-content: flex-end;
   }
 
-  .powering-the-future .card-2,
-  .powering-the-future .card-4 {
-    place-self: end;
-  }
-
-  .connector-line {
-    display: unset;
-    position: absolute;
-  }
-
-  #connector-line-1 {
-    left: 192.5px;
-    top: 744px;
-  }
-
-  #connector-line-2 {
-    top: 319px;
-    left: 525.5px;
-  }
-
-  #connector-line-3 {
-    left: 858.5px;
-    top: 700px;
-  }
 
   #roadmap .card {
     height: 515px;
@@ -1089,5 +1100,44 @@ footer a {
 
   #how-to-buy .card.step-four {
     padding-right: 154px;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  .powering-the-future .card-1 {
+    height: 100%;
+    padding-top: 103px;
+    /* justify-content: flex-end; */
+  }
+
+  .powering-the-future .card-3{
+    place-self: start;
+    height: unset;
+  }
+  .powering-the-future .card-2,
+  .powering-the-future .card-4 {
+    place-self: end;
+    height: unset;
+  }
+
+  .connector-line {
+    display: unset;
+    position: absolute;
+  }
+
+  #connector-line-1 {
+    left: 193.5px;
+    top: 650px;
+  }
+
+  #connector-line-2 {
+    top: 170px;
+    left: 526.5px;
+  }
+
+  #connector-line-3 {
+    left: 859.5px;
+    top: 610px;
   }
 }

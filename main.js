@@ -6,7 +6,7 @@ const menuList = document.querySelectorAll(".menu-item");
 window.addEventListener("load", function () {
   setTimeout(() => {
     document.getElementById("preloader").style.display = "none";
-  }, 2000);
+  }, 3000);
 });
 
 // DISPLAY MENU ON MOBILE
