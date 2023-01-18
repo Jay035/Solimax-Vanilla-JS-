@@ -6,6 +6,7 @@ const menuList = document.querySelectorAll(".menu-item");
 window.addEventListener("load", function () {
   setTimeout(() => {
     document.getElementById("preloader").style.display = "none";
+    document.getElementById("main").classList.remove("hidden");
   }, 3000);
 });
 
@@ -17,7 +18,6 @@ input.addEventListener("click", () => {
 menuList.forEach((item) => {
   item.addEventListener("click", () => {
     menu.classList.toggle("active");
-    console.log(input.checked);
     input.checked = false;
   });
 });

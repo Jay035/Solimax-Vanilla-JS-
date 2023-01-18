@@ -8,6 +8,7 @@
   --text-color: #9ca3af;
 
   --padding: 2rem;
+  --margin: 3em;
   --section-title-font-size: 2em;
 }
 
@@ -31,11 +32,16 @@ body {
   position: relative;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ------------------------------------------------------ */
 /* PRELOADER  */
 
 #preloader {
   position: absolute;
+  top: 0;
   z-index: 99999999;
   width: 100%;
   height: 100vh;
@@ -168,9 +174,9 @@ nav > .menu {
   backdrop-filter: blur(2px);
 }
 
-.menu.active a {
+/* .menu.active a {
   font-size: 18px;
-}
+} */
 
 .menu a {
   color: var(--white);
@@ -196,8 +202,8 @@ nav > .menu {
 
 .hamburger span {
   background-color: var(--white);
-  width: 36px;
-  height: 3px;
+  width: 30px;
+  height: 2px;
   margin-bottom: 8px;
   display: block;
   border-radius: 4px;
@@ -214,6 +220,7 @@ nav > .menu {
 
 #span3 {
   transform-origin: bottom right;
+  margin-bottom: 0;
 }
 
 .hamburger input:checked ~ span {
@@ -282,12 +289,8 @@ section {
   text-align: center;
   align-items: center;
   padding-inline: var(--padding);
-  background: url('./assets/images//hero-pattern.png') center;
-  background-size: cover;
-}
-
-.hero-container > div {
-
+  /* background: url('./assets/images//hero-pattern.png') center;
+  background-size: cover; */
 }
 
 .hero-bg {
@@ -296,7 +299,7 @@ section {
   width: 100%;
   overflow-x: hidden;
   transform: perspective(300px) translate3d(0px, -66px, 42px)
-  scale3d(0.86, 0.75, 1) translateY(816px);
+    scale3d(0.86, 0.75, 1) translateY(816px);
 }
 
 /* .hero-img {
@@ -460,6 +463,7 @@ section {
 /* OUR MISSION */
 .our-mission {
   height: 1260px;
+  width: 100%;
   text-align: center;
   position: relative;
   background: #101725;
@@ -479,6 +483,8 @@ section {
   width: 90%;
   transform: translateX(-50%);
   display: flex;
+  /* justify-content: center; */
+  align-items: center;
   flex-direction: column;
   padding-top: 132px;
 }
@@ -751,7 +757,7 @@ footer a {
   }
 
   section {
-    --padding: 4rem;
+    --padding: 6rem;
     /* padding-block: 9.375em; */
   }
 
@@ -779,7 +785,7 @@ footer a {
   .hero-bg {
     /* height: 1021.47px !important; */
     transform: perspective(300px) translate3d(0px, -66px, 62px)
-  scale3d(0.86, 0.75, 1) translateY(816px);
+      scale3d(0.86, 0.75, 1) translateY(816px);
   }
 
   /* .hero-img {
@@ -900,7 +906,7 @@ footer a {
 /* LAPTOP SCREENS */
 @media screen and (min-width: 1000px) {
   header {
-    --padding: 2.5rem 6.25rem;
+    --padding: 2.5rem 7rem;
   }
 
   nav > .menu {
@@ -937,14 +943,13 @@ footer a {
     /* grid-template-columns: repeat(2, 50%); */
     align-items: center;
 
-    --padding: 334px;
     /* padding-inline: 6.6em; */
   }
 
   .hero-bg {
     transform: perspective(300px) translate3d(0px, -66px, 58px)
       scale3d(0.86, 0.75, 1) translateY(759px);
-    /* height: 552px !important; */
+    height: 552px;
   }
 
   .img-overlay {
@@ -960,6 +965,17 @@ footer a {
   .hero-container .hero-title {
     /* font-size: 50px; */
     /* line-height: 80px !important; */
+  }
+
+  .powering-the-future,
+  .our-mission .container,
+  #tokenomics,
+  #roadmap {
+    padding-inline: 10em;
+  }
+
+  .powering-the-future {
+    padding-top: 60px;
   }
 
   .powering-the-future .title {
@@ -983,10 +999,6 @@ footer a {
     width: 946px;
     height: 764px;
     /* z-index: -1; */
-  }
-
-  .our-mission .mission-asset {
-    width: 946px;
   }
 
   /* OUR ROADMAP */
@@ -1041,7 +1053,11 @@ footer a {
 
 @media screen and (min-width: 1300px) {
   .img-overlay {
-    top: 850px;
+    top: 934px;
+  }
+
+  .hero-container {
+    --padding: 334px;
   }
 
   .powering-the-future .title {
@@ -1067,9 +1083,12 @@ footer a {
     line-height: 32px;
   }
 
+  .our-mission .mission-asset {
+    width: 946px;
+  }
 
   #roadmap .card {
-    height: 515px;
+    height: 520px;
   }
 
   /* HOW TO BUY */
@@ -1103,22 +1122,25 @@ footer a {
   }
 }
 
-
 @media screen and (min-width: 1400px) {
+  .powering-the-future .card {
+    /* height: 400px; */
+    justify-content: end;
+  }
   .powering-the-future .card-1 {
-    height: 100%;
+    height: 462px;
     padding-top: 103px;
     /* justify-content: flex-end; */
   }
 
-  .powering-the-future .card-3{
+  .powering-the-future .card-3 {
     place-self: start;
-    height: unset;
+    /* height: unset; */
   }
   .powering-the-future .card-2,
   .powering-the-future .card-4 {
     place-self: end;
-    height: unset;
+    /* height: unset; */
   }
 
   .connector-line {
@@ -1128,16 +1150,16 @@ footer a {
 
   #connector-line-1 {
     left: 193.5px;
-    top: 650px;
+    top: 749px;
   }
 
   #connector-line-2 {
-    top: 170px;
+    top: 234px;
     left: 526.5px;
   }
 
   #connector-line-3 {
     left: 859.5px;
-    top: 610px;
+    top: 718px;
   }
 }
