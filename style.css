@@ -112,10 +112,11 @@ a {
   font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease;
+  color: var(--white);
 }
 
-nav a:hover,
-footer a:hover {
+.menu-item a:hover,
+a:hover {
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -166,20 +167,11 @@ nav > .menu {
   width: 100%;
   height: 100vh;
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
   align-items: center;
   gap: 22px;
   z-index: 999;
   backdrop-filter: blur(2px);
-}
-
-/* .menu.active a {
-  font-size: 18px;
-} */
-
-.menu a {
-  color: var(--white);
 }
 
 /* HAMBURGER ICON */
@@ -245,19 +237,16 @@ nav > .menu {
   opacity: 0;
 }
 
+/* ----------------------------------------------- */
+/* main section */
 section {
   padding-inline: var(--padding);
-  /* padding-block: 7em; */
   width: 100%;
 }
 
 /* HERO SECTION */
 .hero-section {
-  /* margin-top: 4rem; */
   position: relative;
-  /* top: 4rem; */
-  /* background-color: #000000; */
-  /* height: 100%; */
   height: 1110px;
   width: 100%;
   padding-inline: 0;
@@ -289,8 +278,6 @@ section {
   text-align: center;
   align-items: center;
   padding-inline: var(--padding);
-  /* background: url('./assets/images//hero-pattern.png') center;
-  background-size: cover; */
 }
 
 .hero-bg {
@@ -301,10 +288,6 @@ section {
   transform: perspective(300px) translate3d(0px, -66px, 42px)
     scale3d(0.86, 0.75, 1) translateY(816px);
 }
-
-/* .hero-img {
-  width: 100%;
-} */
 
 .hero-container .hero-title {
   letter-spacing: -2px;
@@ -372,22 +355,18 @@ section {
 /* ------------------------------------------------------- */
 /* POWERING THE FUTURE OF SMART CONTRACTS */
 
-.powering-the-future {
-  /* margin-top: 5em; */
-  /* margin-bottom: 269px; */
-  /* padding-top: 150px; */
-  /* height: 1027px; */
+#about-us {
   padding-bottom: 8rem;
   position: relative;
 }
 
-.powering-the-future .title {
+#about-us .title {
   padding-top: 74px;
   padding-bottom: 92px;
   position: relative;
 }
 
-.powering-the-future > div {
+#about-us > div {
   display: grid;
   justify-content: center;
   gap: 20px;
@@ -405,7 +384,7 @@ section {
   color: var(--text-color);
 }
 
-.powering-the-future .card {
+#about-us .card {
   border: 0.5px solid #374151;
   border-radius: 8px;
   display: flex;
@@ -432,7 +411,7 @@ section {
   border-radius: 40px;
 }
 
-.powering-the-future .card-3 {
+#about-us .card-3 {
   border: 2px solid #374151;
   border-image: linear-gradient(
     90.72deg,
@@ -483,7 +462,6 @@ section {
   width: 90%;
   transform: translateX(-50%);
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   padding-top: 132px;
@@ -505,7 +483,6 @@ section {
 }
 
 .our-mission p {
-  /* font-size: 17px; */
   font-weight: 400;
   line-height: 31px;
   color: var(--text-color);
@@ -544,23 +521,6 @@ section {
   color: var(--text-color);
 }
 
-/* #tokenomics .team-marketing-group,
-#tokenomics .team-marketing-group section {
-  display: flex;
-  align-items: center;
-} */
-
-/* #tokenomics .team-marketing-group {
-  justify-content: center;
-  gap: 24px;
-}
-
-#tokenomics .team-marketing-group section {
-  --padding: 0;
-  width: fit-content;
-  gap: 16px;
-} */
-
 #tokenomics .card {
   width: 100%;
   padding: 16px;
@@ -573,9 +533,7 @@ section {
 /* OUR ROADMAP */
 #roadmap {
   padding-block: 9.2rem 5.5rem;
-  /* padding-block: 5em 3em; */
   background: linear-gradient(360deg, #0f1522 0%, rgba(16, 23, 37, 0) 88.29%);
-  /* transform: matrix(1, 0, 0, -1, 0, 0); */
 }
 
 #roadmap .title {
@@ -662,7 +620,6 @@ section {
   line-height: 26px;
 }
 
-
 /* ----------------------------------------- */
 /* CONTRACT ADDRESS */
 .contract-address {
@@ -703,7 +660,7 @@ section {
   gap: 9px;
 }
 
-.message{
+.message {
   /* padding: 10px 20px;
   border-radius: 8px; */
   position: absolute;
@@ -804,14 +761,9 @@ footer a {
   }
 
   .hero-bg {
-    /* height: 1021.47px !important; */
     transform: perspective(300px) translate3d(0px, -66px, 62px)
       scale3d(0.86, 0.75, 1) translateY(816px);
   }
-
-  /* .hero-img {
-    width: 542px;
-  } */
 
   .hero-container p {
     width: 615px;
@@ -826,29 +778,26 @@ footer a {
   .title {
     --section-title-font-size: 2.5em;
     line-height: 64px;
-    /* padding-inline: var(--padding); */
   }
 
-  .powering-the-future {
+  #about-us {
     padding-block: 20px 13rem;
   }
 
-  .powering-the-future .title {
+  #about-us .title {
     padding-top: 0;
     padding-bottom: 160px;
   }
 
-  .powering-the-future > div {
+  #about-us > div {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .powering-the-future .card {
+  #about-us .card {
     height: unset;
-    /* gap: 14px; */
   }
 
-  .powering-the-future .card h3 {
-    /* font-size: 28px; */
+  #about-us .card h3 {
     line-height: 32px;
     margin-bottom: 1em;
   }
@@ -893,9 +842,6 @@ footer a {
 
   /* --------------------------------------------------------- */
   /* HOW TO BUY */
-  /* #how-to-buy {
-    padding-block: 9.375rem 4.5rem;
-  } */
 
   #how-to-buy .card {
     padding-block: 75px;
@@ -911,10 +857,6 @@ footer a {
     line-height: 36px;
   }
 
-  /* #how-to-buy .card p {
-    font-size: 18px;
-  } */
-
   .contract-address h1 {
     font-size: 2em;
   }
@@ -923,7 +865,7 @@ footer a {
     font-size: 1.125em;
   }
 
-  .message{
+  .message {
     font-size: 1.1rem;
   }
 }
@@ -943,7 +885,6 @@ footer a {
   }
 
   .menu.active {
-    /* background-color: var(--body-bg); */
     padding-top: 0;
     position: unset;
     width: 100%;
@@ -959,16 +900,9 @@ footer a {
   section {
     --padding: 6.25rem;
   }
-  /* .hero-section {
-    padding-bottom: 12rem;
-  } */
 
   .hero-container {
-    /* width: 900px; */
-    /* grid-template-columns: repeat(2, 50%); */
     align-items: center;
-
-    /* padding-inline: 6.6em; */
   }
 
   .hero-bg {
@@ -987,32 +921,24 @@ footer a {
     height: 613px;
   }
 
-  .hero-container .hero-title {
-    /* font-size: 50px; */
-    /* line-height: 80px !important; */
-  }
-
-  .powering-the-future,
+  #about-us,
   .our-mission .container,
   #tokenomics,
   #roadmap {
     padding-inline: 10em;
   }
 
-  .powering-the-future {
+  #about-us {
     padding-top: 60px;
   }
 
-  .powering-the-future .title {
+  #about-us .title {
     width: 745px;
     margin-inline: auto;
   }
 
   /* ---------------------------------------------------------- */
   /* OUR MISSION */
-  /* .our-mission{
-    height: 1400px;
-  } */
 
   .our-mission .mission-bg {
     transform: perspective(300px) translate3d(0px, -66px, 65px)
@@ -1023,7 +949,6 @@ footer a {
   .our-mission .container {
     width: 946px;
     height: 764px;
-    /* z-index: -1; */
   }
 
   /* OUR ROADMAP */
@@ -1037,9 +962,6 @@ footer a {
   }
 
   /* HOW TO BUY */
-  /* #how-to-buy {
-    --padding: 0;
-  } */
 
   #how-to-buy > div {
     grid-template-columns: repeat(2, 1fr);
@@ -1057,23 +979,6 @@ footer a {
   .contract-address button {
     font-size: 1.1em;
   }
-
-  /* #how-to-buy .card.step-one {
-    padding-left: 100px;
-  }
-
-  #how-to-buy .card.step-two {
-    padding-left: 80px;
-  }
-
-  #how-to-buy .card.step-four {
-    /* padding-right: 100px; */
-  /* padding-left: 80px; */
-  /* }  */
-
-  /* footer {
-    padding: 146px 24px;
-  } */
 }
 
 @media screen and (min-width: 1300px) {
@@ -1085,26 +990,21 @@ footer a {
     --padding: 334px;
   }
 
-  .powering-the-future .title {
+  #about-us .title {
     /* padding-top: 150px; */
     width: 1000px;
   }
 
-  .powering-the-future > div {
+  #about-us > div {
     grid-template-columns: repeat(4, 1fr);
     /* padding-inline: 6.25em; */
   }
 
-  .powering-the-future .card {
+  #about-us .card {
     width: 100%;
-    /* height: 281px; */
   }
 
-  /* .powering-the-future .card {
-    height: 100%;
-  } */
-
-  .powering-the-future .card h3 {
+  #about-us .card h3 {
     line-height: 32px;
   }
 
@@ -1148,24 +1048,21 @@ footer a {
 }
 
 @media screen and (min-width: 1400px) {
-  .powering-the-future .card {
-    /* height: 400px; */
+  #about-us .card {
     justify-content: end;
   }
-  .powering-the-future .card-1 {
+  #about-us .card-1 {
     height: 462px;
     padding-top: 103px;
-    /* justify-content: flex-end; */
   }
 
-  .powering-the-future .card-3 {
+  #about-us .card-3 {
     place-self: start;
-    /* height: unset; */
   }
-  .powering-the-future .card-2,
-  .powering-the-future .card-4 {
+
+  #about-us .card-2,
+  #about-us .card-4 {
     place-self: end;
-    /* height: unset; */
   }
 
   .connector-line {
