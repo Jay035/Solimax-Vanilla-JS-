@@ -12,11 +12,12 @@
   --section-title-font-size: 2em;
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 html {
@@ -420,6 +421,7 @@ section {
     rgba(226, 43, 187, 0.9) 85.69%
   );
   border-image-slice: 1;
+  border-radius: 8px;
   /* background: linear-gradient(#d9d9d908, #d9d9d908),
     linear-gradient(90.2deg, #6b03b8 90%, #a818ba 90%, #e22bbb 90%);
   background-origin: border-box;
@@ -430,7 +432,6 @@ section {
     linear-gradient(#d9d9d908, #d9d9d908);
   mask-composite: exclude; */
   /* border: 2px solid transparent; */
-  border-radius: 8px;
 }
 
 .connector-line {

@@ -25,7 +25,7 @@ menuList.forEach((item) => {
 });
 
 function copyToClipboard() {
-  let text = "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6";
+  let text = "0x39263A476aADF768BE43a99b24C4e461098524a4";
   navigator.clipboard.writeText(text).then(
     function () {
       console.log("Async: copying address was successful");
